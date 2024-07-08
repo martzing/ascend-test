@@ -42,10 +42,18 @@
         Admin-API-->>Admin: Return result
 ```
 
-### Update parking slot time API
+### Update parking slot API
 ```mermaid
     sequenceDiagram
         Admin->>Admin-API: Request update parking slot
         Note over Admin-API: Update parking slot and clear cache
+        Admin-API-->>Admin: Return result
+```
+
+### Update parking price API
+```mermaid
+    sequenceDiagram
+        Admin->>Admin-API: Request update parking slot
+        Note over Admin-API: Update parking price and clear cache
         Admin-API-->>Admin: Return result
 ```
