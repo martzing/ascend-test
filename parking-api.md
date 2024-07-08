@@ -5,7 +5,7 @@
         alt is unavailable
             Parking-API-->>Customer: Return error message
         else is available
-            Parking-API-->>Customer: Return ticket detail
+            Parking-API-->>Customer: Return ticket detail and payment link
         end
 ```
 
@@ -17,7 +17,7 @@
             Parking-API-->>Customer: Return please payment message
         else payment success
             alt is over time
-                Parking-API-->>Customer: Return please make payment charge message
+                Parking-API-->>Customer: Return please make payment charge message (Use previous link for pay)
             else
                 Parking-API-->>Customer: Return thank you message
                 Parking-API->>Customer: Public current parking lot status (websocket)

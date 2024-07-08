@@ -25,7 +25,7 @@
         datetime parking_time
         datetime exit_time
     }
-    parking_transaction 1--1 payment_transaction : ""
+    parking_transaction 1--1+ payment_transaction : ""
     payment_transaction {
         string id PK
         string parking_transaction_id FK
